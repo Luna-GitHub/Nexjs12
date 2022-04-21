@@ -7,12 +7,17 @@ import { getCourses } from "../redux/actions/Home";
 import Image from 'next/image';
 import Link from 'next/link';
 import Course from "../components/course";
-import Ailearn from "../pages/AIlearn/AIlearn"
+import Banner from "../components/banner";
+import Than from "../components/than";
+import Wrapper from "../components/wrapper";
+import Footer from "../components/footer";
 const Home = ({ courses, error, isLoading, actionGetCourses }) => {
     useEffect(() => {
         actionGetCourses();
     }, []);
+
     return (
+        
 <div>
         <div className="container">
             <Head>
@@ -22,72 +27,12 @@ const Home = ({ courses, error, isLoading, actionGetCourses }) => {
                 
             </Head>
         </div>
+        
 <div className="tong">
-        <div className="dau">
-            <nav className="navbar navbar-expand-md navbar-fixed-top"/>
-                <a href="#" className="navbar-brand mx-4 col" 
-                style={{
-                    width: '660px',
-                    height: '50px',
-                    paddingTop: '0',
-                    float: "left"}}>
-
-                <a href=""><ion-icon className="bathanh" name="menu" 
-                style={{
-                    color: "white",
-                    width: '35px',
-                    height: '35px',
-                }}></ion-icon>
-                </a>
-                </a>
-            <p className="text-white col" 
-                style={{ 
-                    width: '230px',
-                    height: '26px', 
-                    float: "right",
-                    fontSize: '12px'}}>
-            Bạn chưa đăng nhập. (<u><a href="dangnhap.html" className="card-link text-white">Đăng nhập</a></u>)</p>
-        </div>
-        <div className="dau1">
-            <div className="navbar navbar-expand-md mt-1">
-            <img src="New Project.png" className=" rounded float-start mx-5" width={300} height={150}/>
-            <div className="dropdown">
-                <button className="dropbtn">VIETNAMESE(VI)<ion-icon name="caret-down-outline"></ion-icon></button>
-                <div className="dropdown-content">
-                    <a href="indexE.html">English(en)</a>
-                    <a href="#">Vietnamese(vn)</a>
-                </div>
-            </div>
-        </div>    
-    </div>
-    <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
-        <div className="carousel-inner">
-            <div className="carousel-item active">
-                <img src="images.jpg" className="d-block w-100" alt="..." style={{height:'500px'}}/>
-                <div className="carousel-caption d-none d-md-block">
-                    <div className="background">
-                        <div className="transbox">Đánh giá năng lực THPT</div>
-                        <a href="#" className=" read-more text-white px-3 py-1">Xem thêm ></a>
-                    </div>
-                </div>
-            </div>
-            <div className="carousel-item">
-                <img src="tải xuống.jpg" className="d-block w-100" alt="..." style={{height:'500px'}}/>
-                <div className="carousel-caption d-none d-md-block">
-                    <a href="#" className=" read-more text-white px-3 py-1">Xem thêm ></a>
-                </div>
-            </div>
-        </div>
-        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-    </div>
-    <div id="GIUA">
+            <Banner/>
+            <Than/>
+            <Wrapper/>
+        <div id="GIUA">
         <h2>Đánh giá năng lực học sinh</h2>
         <p>Đánh giá năng lực học sinh</p>
         <a href="#">Read More >></a>
@@ -96,7 +41,6 @@ const Home = ({ courses, error, isLoading, actionGetCourses }) => {
         <h2 className="ph2">Các khoá học hiện tại</h2>
         <div className="container">
             <div className="row">
-
             { courses?.length>0 && courses.map(course=>{
                 return (
                 <Course name={course?.name} link={course?.name_image}/>
@@ -104,68 +48,15 @@ const Home = ({ courses, error, isLoading, actionGetCourses }) => {
             })}
             </div>
         </div> <br/>
-        
-        <div className="footer bg-white">
-            <div className="container">
-                <div className="row">
-                    <div className="col">
-                        <h5 className="in">INFO</h5>
-                        <a href="https://sgddt.quangbinh.gov.vn/3cms/" className="ina">Sở giáo dục và đào tạo tỉnh Quảng Bình</a>
-                    </div>
-                    <div className="col">
-                        <h5 className="in">CONTACT US</h5>
-                        <p>187 Hữu Nghị - TP Đồng Hới - Quảng Bình</p>
-                        <p>
-                            <ion-icon name="call"></ion-icon> Phone : 0232.3822190
-                        </p>
-                        <p>
-                            <ion-icon name="mail"></ion-icon> E-mail : <a href="#" style={{color: "black"}}>webmaster@sgddt-quangbinh.gov.vn</a>
-                        </p>
-                    </div>
-                    <div className="col">
-                        <h5 className="in">GET SOCIAL</h5>
-                        <div className="icon">
-                            <div className="social-buttons">
-                                
-                                <a href="http://www.facebook.com" target="blank" className="social-margin">
-                                    <div className="social-icon facebook">
-                                        <ion-icon name="logo-facebook"></ion-icon>
-                                    </div>
-                                </a>
-                               
-                                <a href="https://in.pinterest.com/yourpinterestname/" target="blank" className="social-margin">
-                                    <div className="social-icon pinterest">
-                                        <ion-icon name="logo-pinterest"></ion-icon>
-                                    </div>
-                                </a>
-                                
-                                <a href="http://twitter.com/" target="blank" className="social-margin">
-                                    <div className="social-icon twitter">
-                                        <ion-icon name="logo-twitter"></ion-icon>
-                                    </div>
-                                </a>
-                                
-                                <a href="https://www.google.com/+yourgoogleplusid" target="blank" className="social-margin">
-                                    <div className="social-icon google-plus">
-                                        <ion-icon name="logo-google"></ion-icon>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-            <div class="duoi">
+        <Footer/>
+        <div className="duoi">
             <p>Copyright © 2021 - danhgiananglucthpt.edu.vn</p>
         </div>
-        <div class="duoin">
+        <div className="duoin">
             <a href="#">Data retention summary</a>
         </div>
     </div>
-
-
-
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>

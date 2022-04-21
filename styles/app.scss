@@ -29,7 +29,6 @@ a {
   box-shadow: 0 0 5px 2px black;
   background-color: #0073a5;
 }
-
 .dau1 {
   background-color:#0073a5;
 }
@@ -338,4 +337,196 @@ a:active {
   color: darkred;
   text-decoration: none;
 }
-
+/*============AILEARNING==============*/
+.top {
+  background-color: #001737;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 7000;
+  box-shadow: 0 0 5px 2px ;
+}
+.logo{
+  height: 40px !important;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 35px !important;
+  margin-bottom: 10px;
+}
+.thanhngang{
+  color: white;
+  font-weight: bold;
+  display: inline;
+}
+.thanhngang a{
+  margin-right: 22px;
+}
+.thanhngang a:hover{
+  padding: 22px;
+  background-color: orange;
+  color: #ffffff;
+}
+.phong {
+  display: inline;
+  position: relative;
+}
+.thanhdoc li {
+  display: inline;
+  font-size: large;
+  margin: 5px;
+  height: 70px;
+  color: white;
+  font-weight: bold;
+  
+}
+.thanhdoc li:nth-child(1) {
+  margin-Left: 120px;
+}
+.thanhdoc li:nth-child(2) {
+  border-left: thin solid white;
+}
+.thanhdoc li:nth-child(3) {
+  border-left: thin solid white;
+}
+.thanhdoc li a:hover {
+  color: white !important;
+}
+.thanhdoc {
+  position: absolute;
+  bottom: -85px !important;
+}
+.tcenter{
+  width: 100%;
+}
+.bentrai {
+  float: left !important;
+  width: 660px;
+  border-radius: 5px;
+  margin: 125px 0 50px 100px;
+  box-shadow: 0 0 5px 2px wheat;
+}
+.hinhhat{
+  margin-top: 25px;
+  text-align: center;
+}
+.sach a:hover{
+  color: black;
+}
+.sach a{
+  font-weight: bold;
+  color: #001737;
+  margin: 20px 0 0 100px;
+}
+.sach {
+  margin-bottom: 30px;
+}
+.tt{
+  background-color: #f7fafe;
+  border-radius: 40px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 500px;
+}
+.tt p{
+  padding: 50px 0 60px 20px;
+  font-weight: bold;
+  color: #325ea7;
+}
+.benphai{
+  float: right !important;
+  width: 300px;
+}
+.tren p{
+  display: inline;
+}
+.boc {
+  margin-top: 125px;
+  background-color: #1b1946;
+  border-radius: 10px;
+  padding: 15px 0 15px 20px;
+}
+.tren p:nth-child(1) {
+  margin-top: 125px;
+  background-color: #1b1946;
+  color: white;
+  border-radius: 10px;
+  padding: 15px 0 15px 0px;
+  font-weight: bold;
+}
+.tren p:nth-child(2){
+  color: white;
+  padding-left: 130px;
+}
+.duoih {
+  margin-top: 25px;
+  background-color: #1b1946;
+  border-radius: 10px;
+  padding: 15px 0 15px 20px;
+  color: white;
+}
+.duoih h{
+  font-weight: bold;
+}
+.duoih p{
+  padding-right: 10px;
+  font-weight: lighter;
+}
+.cuoi {
+  background-color: #001737;
+  margin-top: 100px;
+}
+.cuoi2 p{
+  color: white;
+}
+.cuoi1 h1{
+  color: white;
+  font-size: x-large;
+}
+.cuoi1 {
+  float: left;
+  padding-top: 25px;
+  padding-left: 250px;
+  padding-right: 20px;
+}
+.cuoi2 {
+  float: left;
+  padding-top: 25px;
+  padding-right: 20px;
+}
+.cuoi3 {
+  padding-top: 20px;
+}
+.cuoicung {
+  background-color: black;
+  text-align: center;
+}
+.cuoicung p{
+  color: white;
+  font-size: large;
+}
+/*----------------danhgiananglucpt.com-------------------------------------*/
+.adau {
+  background-color: #0d6efd;
+}
+.btrai {
+  margin: 0 50px 0 70px;
+  padding: 10px 10px 10px 10px;
+  background-color: #0d6efd;
+  border: #0d6efd;
+  color: white;
+}
+.btrai:hover{
+  background-color:#1209b4;
+  border-radius: 5px;
+}
+.bphai {
+  display: inline;
+  text-align: center;
+}
+.bphai a{
+  color: white;
+}
+.bphai a:hover{
+  color: white;
+}
